@@ -108,6 +108,23 @@ const photoData = {
         "p29.jpeg",
         "p30.jpg"
     ],
+    soundshore: [
+        "s1.jpg",
+        "s2.jpg",
+        "s3.jpg",
+        "s4.jpg",
+        "s5.jpg",
+        "s6.jpg",
+        "s7.jpg",
+        "s8.jpg",
+        "s9.jpg",
+        "s10.jpg",
+        "s11.jpg",
+        "s12.jpg",
+        "s13.jpg",
+        "s14.jpg",
+        "s15.jpg"
+    ],
   "new-york": [
     "newyork1.jpg",
     "newyork2.jpg",
@@ -132,7 +149,8 @@ const descriptions = {
         "The most therapeutic thing in the world for me is heading out with a full tank and nowhere to go, finding cool places " +
         "to take photos and stopping for some good food. \nThis is my first bike, which I named Buckbeak. A 1989 Yamaha Radian 600 " +
         "that I got for $900 and rebuilt over the years. Nothing can compare to that carberated inline 4 cylinder induction sound.",
-    portraits: "Here are some portraits of friends over the years."
+    portraits: "Here are some portraits of friends over the years.",
+    soundshore: "Fall 2024 - Kodak gold - A chilly November walk through Greenwich point."
 };
 
 // Update the displayed photos and description
