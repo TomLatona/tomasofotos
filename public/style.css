@@ -1,0 +1,120 @@
+/* General reset */
+body, h1, p, button {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    padding: 20px;
+    background-color: #ffffff; /* Overall white background */
+    color: #333;
+}
+
+
+
+/* Header Container */
+.header-container {
+    /* background-color: #2b4f35;  Dark green background */
+    background-color: #9cdbd3;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 0 0 8px 8px;
+    margin-bottom: 20px;
+    align-items: center;
+    text-align: center;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.site-logo {
+    width: 100px;
+    height: auto;
+}
+h1 {
+    font-size: 2em;
+}
+
+/* Intro Paragraph */
+.intro {
+    padding-top: 10px;
+    font-size: 1.2em;
+}
+
+/* Tabs Section */
+.tabs {
+    margin-bottom: 20px;
+}
+.tab {
+    padding: 10px 20px;
+    margin-right: 5px;
+    background: #f0f0f0;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1em;
+}
+.tab:hover {
+    background: #e0e0e0;
+}
+.tab.active {
+    background: #d0d0d0;
+    font-weight: bold;
+}
+
+/* Gallery Section */
+.gallery {
+    margin-top: 20px;
+}
+
+.gallery-description {
+    font-size: 1.2em;
+    color: #444;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.photo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
+    gap: 10px;
+}
+.photo-grid img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+#gallery-description {
+    font-size: 1.2em;
+    color: #444;
+    margin-bottom: 20px;
+    text-align: center;
+    transition: color 0.3s ease;
+}
+
+.about-section {
+    text-align: center;
+    margin: 20px auto;
+    max-width: 800px;
+}
+
+.about-photo {
+    width: 100%;
+    max-width: 400px;
+    margin: 20px auto;
+    display: block;
+    border-radius: 10px;
+}
+
+.about-section p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    color: #444;
+    margin: 20px 0;
+}

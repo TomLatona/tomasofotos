@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/x-icon" href="public/favicon.ico">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tomaso Fotos</title>
+  <link rel="stylesheet" href="public/style.css">
+</head>
+<body>
+<div class="header-container">
+  <header>
+    <h1>Tomaso Fotos</h1>
+  </header>
+  <p class="intro">
+    Experience my journey through a camera lens
+  </p>
+</div>
+
+  <div class="tabs" align="center">
+    <button class="tab" onclick="showAbout(); highlightTab(this)">About me</button>
+    <button class="tab" onclick="showPhotos('motorcycles'); highlightTab(this)">My motorcycles</button>
+    <button class="tab" onclick="showPhotos('portraits'); highlightTab(this)">Portraits</button>
+    <button class="tab" onclick="showPhotos('japan'); highlightTab(this)">Japan on film</button>
+    <button class="tab" onclick="showPhotos('savannah'); highlightTab(this)">Savannah on film</button>
+    <button class="tab" onclick="showPhotos('china'); highlightTab(this)">China on digital</button>
+    <!-- <button class="tab" onclick="showPhotos('savannahDSLR')">Savannah on digital</button> -->
+    <!-- <button class="tab" onclick="showPhotos('pr')">Puerto Rico on digital</button> -->
+    <!-- <button class="tab" onclick="showPhotos('new-york')">New York</button> -->
+  </div>
+
+<div class="gallery">
+  <p id="gallery-description">
+    I've loved taking photos for as long as I can remember.
+    In the last decade I've been working on developing my process for creative expression
+    and have found in photography a way to capture the heart and soul of a moment.
+    As I've grown as a person and been fortunate enough to travel the globe, here is where I will
+    share the deepest glimpse into myself. The characters in the story of places I visit,
+    and the feelings inspired by an environment. <br>
+    <br>Explore my collections of photos through different places, themes, and emotions.
+  </p>
+  <div class="photo-grid">
+    <!-- Photos will be dynamically inserted here -->
+  </div>
+</div>
+
+<script src="src/main.js"></script>
+</body>
+</html>
