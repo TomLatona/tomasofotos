@@ -52,6 +52,7 @@ h1 {
 }
 .tab {
     padding: 10px 20px;
+    margin-bottom: 10px;
     margin-right: 5px;
     background: #f0f0f0;
     border: 1px solid #ccc;
