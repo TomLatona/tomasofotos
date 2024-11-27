@@ -158,7 +158,7 @@ const descriptions = {
         "the best roads in the country and even the world. From the pacific coast highway in southern and northern california " +
         "to the tail of the dragon, I now know that the absolute best means for an adventure is in the saddle of a motorcycle. " +
         "Since then I've owned three, and am always itching to get back out on the road the next chance I get. \n \n" +
-        "Here are some shots of my first bike from years ago taken during those cherished weekend adventures. My old friend, Buckbeak.",
+        "Here are some shots of my first bike from years ago taken during those cherished weekend adventures. \nMy old friend, Buckbeak.",
     portraits: "Here are some portraits of friends over the years.",
     soundshore: "Fall 2024 - Kodak gold - A chilly November walk through Greenwich point."
 };
