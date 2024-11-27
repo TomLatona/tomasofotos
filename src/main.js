@@ -145,10 +145,20 @@ const descriptions = {
   china: "Summer 2024 - iPhone 15 Pro Max - I spent almost a month in China for work. I travelled between many cities in eastern china" +
       " and was deeply moved by the ancient cities, tea ceremonies, and remarkable people. Come on a tour" +
       " with me of my experiences in the People's Republic.",
-    motorcycles: "I started riding motorcycles when I was 18 and it has brought me coast to coast on some of my favorite adventures." +
-        "The most therapeutic thing in the world for me is heading out with a full tank and nowhere to go, finding cool places " +
-        "to take photos and stopping for some good food. \nThis is my first bike, which I named Buckbeak. A 1989 Yamaha Radian 600 " +
-        "that I got for $900 and rebuilt over the years. Nothing can compare to that carberated inline 4 cylinder induction sound.",
+    motorcycles: "When I was 18 years old I bought my first motorcycle. For $900 from a childhood friend I got my 1989 " +
+        "Yamaha Radian 600, which I became obsessed with and rode every chance I got. Throughout college it became a weekly tradition " +
+        "to go out with no plan at all, no maps, and just decide which way to turn randomly at each intersection. Each time " +
+        "I would end up somewhere new, taking my time and finding all sorts of cool things off the beaten path. This became " +
+        "a very therapeutic weekly reset for me. I would bring my DSLR and pull off somewhere, walk into the woods or along a river " +
+        "and find little scenes to capture. It was just me, my music, my camera, and my bike. I honestly dont know how I would've gotten " +
+        "through the grueling finals as a computer science major without it. \n \n The more I rode the more I found " +
+        "things I could modify on the bike. I started with simple cosmetic things like paint and then doing very in depth work " +
+        "almost to the point of rebuilding the whole motorcycle. I would attend bike nights in coney island and made so many great " +
+        "friends who shared this passion. As the years went on and my skills grew, I've had the amazing fortune of riding some of " +
+        "the best roads in the country and even the world. From the pacific coast highway in southern and northern california " +
+        "to the tail of the dragon, I now know that the absolute best means for an adventure is in the saddle of a motorcycle. " +
+        "Since then I've owned three, and am always itching to get back out on the road the next chance I get. \n \n" +
+        "Here are some shots of my first bike from years ago taken during those cherished weekend adventures. My old friend, Buckbeak.",
     portraits: "Here are some portraits of friends over the years.",
     soundshore: "Fall 2024 - Kodak gold - A chilly November walk through Greenwich point."
 };
@@ -160,6 +170,7 @@ function showPhotos(location) {
 
   // Update description
   galleryDescription.textContent = descriptions[location];
+  galleryDescription.innerHTML = descriptions[location].replace(/\n/g, "<br>");
 
   // Clear existing photos
   photoGrid.innerHTML = "";
