@@ -74,7 +74,7 @@ const photoData = {
         "bb8.JPG",
         "bb9.jpg",
         "bb10.jpg",
-        "bb11.JGP",
+        "bb11.JPG",
         "bb12.JPG"
     ],
     portraits: [
@@ -102,11 +102,9 @@ const photoData = {
         "p22.jpg",
         "p23.jpg",
         "p24.JPG",
-        "p25.JPG",
         "p26.JPG",
         "p27.JPG",
         "p28.JPG",
-        "p29.jpeg",
         "p30.JPG"
     ],
     soundshore: [
