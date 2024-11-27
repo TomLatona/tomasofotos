@@ -219,3 +219,35 @@ function highlightTab(tabElement) {
     // Add 'active' class to the clicked tab
     tabElement.classList.add('active');
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+  const photoGrid = document.querySelector(".photo-grid");
+  const overlay = document.getElementById("photo-overlay");
+  const enlargedPhoto = document.getElementById("enlarged-photo");
+  const closeOverlayButton = document.getElementById("close-overlay");
+
+  // Show overlay with enlarged photo
+  photoGrid.addEventListener("dblclick", (event) => {
+    if (event.target.tagName === "IMG") {
+      const photoSrc = event.target.src;
+
+      // Set the enlarged photo's source
+      enlargedPhoto.src = photoSrc;
+
+      // Show the overlay
+      overlay.style.display = "flex";
+    }
+  });
+
+  // Close overlay when clicking "X"
+  closeOverlayButton.addEventListener("click", () => {
+    overlay.style.display = "none";
+  });
+
+  // Close overlay when clicking outside the image
+  overlay.addEventListener("click", (event) => {
+    if (event.target === overlay) {
+      overlay.style.display = "none";
+    }
+  });
+});

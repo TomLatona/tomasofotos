@@ -82,7 +82,7 @@ h1 {
 
 .photo-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     gap: 20px;
 }
 .photo-grid img {
@@ -119,3 +119,50 @@ h1 {
     color: #444;
     margin: 20px 0;
 }
+
+/* Overlay styling */
+.photo-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    overflow: auto; /* Enable scrolling if content overflows */
+    padding: 1rem;
+  }
+  
+  /* Enlarged image styling */
+  #enlarged-photo {
+    max-width: 90vw;
+    max-height: 90vh;
+    border: 5px solid white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  }
+  
+  /* Content inside the overlay */
+  .overlay-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: white;
+    color: black;
+    font-size: 1.5rem;
+    border: none;
+    border-radius: 50%;
+    padding: 0.5rem;
+    cursor: pointer;
+    z-index: 1001; /* Ensure it stays above the image */
+  }
