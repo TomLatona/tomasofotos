@@ -1,22 +1,52 @@
 // Photo data for each tab
 const photoData = {
   japan: [
-    "1.jpeg",
-    "2.jpeg",
-    "3.jpeg",
-    "4.jpeg",
-    "5.jpeg",
-    "6.jpeg",
-    "7.jpeg",
-    "8.jpeg",
-    "9.jpeg",
-    "10.jpeg",
-    "11.jpeg",
-    "12.jpeg",
-    "13.jpeg",
-    "14.jpeg",
-    "15.jpeg"
-
+    "j1.jpg",
+    "j2.jpg",
+    "j3.jpg",
+    "j4.jpg",
+    "j5.jpg",
+    "j6.jpg",
+    "j7.jpg",
+    "j8.jpg",
+    "j9.jpg",
+    "j10.jpg",
+    "j11.jpg",
+    "j12.jpg",
+    "j13.jpg",
+    "j14.jpg",
+    "j15.jpg",
+    "j16.jpg",
+    "j17.jpg",
+    "j18.jpg",
+    "j19.jpg",
+    "j20.jpg",
+    "j21.jpg",
+    "j22.jpg",
+    "j23.jpg",
+    "j24.jpg",
+    "j25.jpg",
+    "j26.jpg",
+    "j27.jpg",
+    "j28.jpg",
+    "j29.jpg",
+    "j30.jpg",
+    "j31.jpg",
+    "j32.jpg",
+    "j33.jpg",
+    "j34.jpg",
+    "j35.jpg",
+    "j36.jpg",
+    "j37.jpg",
+    "j38.jpg",
+    "j39.jpg",
+    "j40.jpg",
+    "j41.jpg",
+    "j42.jpg",
+    "j43.jpg",
+    "j44.jpg",
+    "j45.jpg",
+    "j46.jpg"
   ],
   savannah: [
     "1.jpg",
@@ -124,6 +154,50 @@ const photoData = {
         "s14.jpg",
         "s15.jpg"
     ],
+    nys: [
+      "nys1.jpeg",
+      "nys2.JPG",
+      "nys3.JPG",
+      "nys4.jpg",
+      "nys5.jpg",
+      "nys6.JPG",
+      "nys7.jpeg",
+      "nys8.jpeg",
+      "nys9.jpeg",
+      "nys10.jpeg",
+      "nys11.JPG",
+      "nys12.JPG",
+      "nys13.jpg",
+      "nys14.JPG",
+      "nys15.JPG",
+      "nys16.JPG",
+      "nys17.JPG",
+      "nys18.JPG",
+      "nys19.JPG",
+      "nys20.jpg",
+      "nys21.jpg",
+      "nys22.jpg",
+      "nys23.JPG",
+      "nys24.jpg",
+      "nys25.jpg",
+      "nys26.JPG",
+      "nys27.JPG",
+      "nys28.JPG"
+    ],
+    savdslr: [
+      "s1.JPG",
+      "s2.JPG",
+      "s3.JPG",
+      "s4.JPG",
+      "s5.JPG",
+      "s6.JPG",
+      "s7.JPG",
+      "s8.JPG",
+      "s9.JPG",
+      "s10.JPG",
+      "s11.JPG",
+      "s12.JPG"
+    ],
   "new-york": [
     "newyork1.jpg",
     "newyork2.jpg",
@@ -159,29 +233,11 @@ const descriptions = {
         "Since then I've owned three, and am always itching to get back out on the road the next chance I get. \n \n" +
         "Here are some shots of my first bike from years ago taken during those cherished weekend adventures. \nMy old friend, Buckbeak.",
     portraits: "Here are some portraits of friends over the years.",
-    soundshore: "Fall 2024 - Kodak gold - A chilly November walk through Greenwich point."
+    soundshore: "Fall 2024 - Kodak gold - A chilly November walk through Greenwich point.",
+    nys: "This collection is a few highlights from my weekend rides during freshman year of college. See the motorcycles tab for more background.",
+    savdslr: "Spring 2024 - Photo walks through downtown Savannah on my Canon EOS Rebel T7 with a 18-55mm lens"
 };
 
-// Update the displayed photos and description
-function showPhotos(location) {
-  const photoGrid = document.querySelector(".photo-grid");
-  const galleryDescription = document.getElementById("gallery-description");
-
-  // Update description
-  galleryDescription.textContent = descriptions[location];
-  galleryDescription.innerHTML = descriptions[location].replace(/\n/g, "<br>");
-
-  // Clear existing photos
-  photoGrid.innerHTML = "";
-
-  // Add photos from the predefined list
-  photoData[location].forEach((photo) => {
-    const imgElement = document.createElement("img");
-    imgElement.src = `public/${location}/${photo}`;
-    imgElement.alt = `${location} photo`;
-    photoGrid.appendChild(imgElement);
-  });
-}
 
 function showAbout() {
   const photoGrid = document.querySelector(".photo-grid");
@@ -205,7 +261,10 @@ function showAbout() {
       <br><br>I plan to shoot basically only film going forward, using my 1979 Canon A-1 I bought in Japan, with a 50mm prime 1.4 lense.</p>
       <img src="public/about-me/me.jpeg" alt="Gallery 1" class="about-photo">
       <p>I'm born and raised in the New York City area, but travel every chance I get since I work remote as a software engineer.</p>
+      <img src="public/about-me/hudsonvalley.JPG" alt="Gallery 2" class="about-photo">
       <img src="public/about-me/pointreyes.jpeg" alt="Gallery 2" class="about-photo">
+      <img src="public/about-me/zorotail.jpeg" alt="Gallery 2" class="about-photo">
+      <img src="public/about-me/sallysc.JPG" alt="Gallery 2" class="about-photo">
       <p>Thank you for visiting my site. I hope these photos inspire you to explore the beauty around you!</p>
     </div>
   `;
@@ -219,22 +278,53 @@ function highlightTab(tabElement) {
     tabElement.classList.add('active');
 }
 
-document.addEventListener("DOMContentLoaded", () => {
+let currentFolderName = ""; //Current folder name used for next/previous image
+let currentPhotoList = []; // List of currently displayed photos
+let currentPhotoIndex = 0; // Current index in the photo list
+
+// Update the displayed photos and description
+function showPhotos(location) {
   const photoGrid = document.querySelector(".photo-grid");
+  const galleryDescription = document.getElementById("gallery-description");
+
+  // Update description
+  galleryDescription.textContent = descriptions[location];
+  galleryDescription.innerHTML = descriptions[location].replace(/\n/g, "<br>");
+
+  // Clear existing photos
+  photoGrid.innerHTML = "";
+
+  // Populate the current photo list and grid
+  currentFolderName = location;
+  currentPhotoList = photoData[location] || [];
+  currentPhotoList.forEach((photo) => {
+    const imgElement = document.createElement("img");
+    imgElement.src = `public/${location}/${photo}`;
+    imgElement.alt = `${location} photo`;
+    photoGrid.appendChild(imgElement);
+  });
+}
+
+document.addEventListener("DOMContentLoaded", () => {
   const overlay = document.getElementById("photo-overlay");
   const enlargedPhoto = document.getElementById("enlarged-photo");
+  const leftArrow = document.getElementById("left-arrow");
+  const rightArrow = document.getElementById("right-arrow");
   const closeOverlayButton = document.getElementById("close-overlay");
 
   // Show overlay with enlarged photo
-  photoGrid.addEventListener("dblclick", (event) => {
+  document.querySelector(".photo-grid").addEventListener("dblclick", (event) => {
     if (event.target.tagName === "IMG") {
       const photoSrc = event.target.src;
 
-      // Set the enlarged photo's source
-      enlargedPhoto.src = photoSrc;
+      // Determine the index of the clicked photo in the current list
+      currentPhotoIndex = currentPhotoList.findIndex((photo) => photoSrc.endsWith(photo));
 
-      // Show the overlay
-      overlay.style.display = "flex";
+      // Set the enlarged photo's source
+      if (currentPhotoIndex !== -1) {
+        enlargedPhoto.src = photoSrc;
+        overlay.style.display = "flex"; // Show the overlay
+      }
     }
   });
 
@@ -247,6 +337,35 @@ document.addEventListener("DOMContentLoaded", () => {
   overlay.addEventListener("click", (event) => {
     if (event.target === overlay) {
       overlay.style.display = "none";
+    }
+  });
+
+  // Navigate to the previous photo
+  function showPreviousPhoto() {
+    currentPhotoIndex = (currentPhotoIndex - 1 + currentPhotoList.length) % currentPhotoList.length;
+    enlargedPhoto.src = `public/${currentFolderName}/${currentPhotoList[currentPhotoIndex]}`;
+  }
+
+  // Navigate to the next photo
+  function showNextPhoto() {
+    currentPhotoIndex = (currentPhotoIndex + 1) % currentPhotoList.length;
+    enlargedPhoto.src = `public/${currentFolderName}/${currentPhotoList[currentPhotoIndex]}`;
+  }
+
+  // Add event listeners for navigation buttons
+  leftArrow.addEventListener("click", showPreviousPhoto);
+  rightArrow.addEventListener("click", showNextPhoto);
+
+  // Handle keyboard navigation for overlay
+  document.addEventListener("keydown", (event) => {
+    if (overlay.style.display === "flex") { // Only respond if the overlay is visible
+      if (event.key === "ArrowRight") {
+        showNextPhoto();
+      } else if (event.key === "ArrowLeft") {
+        showPreviousPhoto();
+      } else if (event.key === "Escape") {
+        overlay.style.display = "none"; // Close overlay on Escape key
+      }
     }
   });
 });

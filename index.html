@@ -22,22 +22,27 @@
     <button class="tab" onclick="showAbout(); highlightTab(this)">About me</button>
     <button class="tab" onclick="showPhotos('motorcycles'); highlightTab(this)">Motorcycles</button>
     <button class="tab" onclick="showPhotos('portraits'); highlightTab(this)">Portraits</button>
+    <!-- <button class="tab" onclick="showPhotos('nys'); highlightTab(this)">NY State</button> -->
     <button class="tab" onclick="showPhotos('china'); highlightTab(this)">China</button>
     <button class="tab" onclick="showPhotos('japan'); highlightTab(this)">Japan (film)</button>
-    <button class="tab" onclick="showPhotos('savannah'); highlightTab(this)">Savannah (film)</button>
     <button class="tab" onclick="showPhotos('soundshore'); highlightTab(this)">Sound Shore (film)</button>
-    <!-- <button class="tab" onclick="showPhotos('savannahDSLR')">Savannah on digital</button> -->
+    <button class="tab" onclick="showPhotos('savannah'); highlightTab(this)">Savannah (film)</button>
+    <!-- <button class="tab" onclick="showPhotos('savdslr'); highlightTab(this)">Savannah (dslr)</button> -->
     <!-- <button class="tab" onclick="showPhotos('pr')">Puerto Rico on digital</button> -->
     <!-- <button class="tab" onclick="showPhotos('new-york')">New York</button> -->
   </div>
 
   <!-- Overlay for enlarged photo -->
-<div id="photo-overlay" class="photo-overlay" style="display: none;">
-  <div class="overlay-content">
-    <img id="enlarged-photo" alt="Enlarged photo">
-    <button id="close-overlay" class="close-btn">&times;</button>
+  <div id="photo-overlay" class="photo-overlay" style="display: none;">
+    <div class="overlay-content">
+      <div class="overlay-buttons">
+        <button id="left-arrow" class="overlay-arrow">&larr;</button>
+        <button id="close-overlay" class="close-btn">&times;</button>
+        <button id="right-arrow" class="overlay-arrow">&rarr;</button>
+      </div>
+      <img id="enlarged-photo" alt="Enlarged photo">
+    </div>
   </div>
-</div>
 
 <div class="gallery">
   <p id="gallery-description">
