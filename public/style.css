@@ -139,8 +139,8 @@ h1 {
   
   /* Enlarged image styling */
   #enlarged-photo {
-    max-width: 80vw;
-    max-height: 80vh;
+    max-width: 90vw;
+    max-height: 90vh;
     border: 5px solid white;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
