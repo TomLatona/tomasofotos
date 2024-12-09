@@ -11,13 +11,14 @@
 <body>
 <div class="header-container">
   <header>
-    <h1>Tomaso Fotos</h1>
-  </header>
-  <p class="intro">
-    Experience my journey through a camera lens
-  </p>
+  <h1>Tomaso</h1>
+  <img src="public/logo2.png" alt="Logo" class="header-logo">
+  <h1>Fotos</h1>
+</header>
 </div>
 
+<div class="tab-container">
+  <hr class="tab-hr">
   <div class="tabs" align="center">
     <button class="tab" onclick="showAbout(); highlightTab(this)">About me</button>
     <button class="tab" onclick="showPhotos('motorcycles'); highlightTab(this)">Motorcycles</button>
@@ -31,6 +32,8 @@
     <!-- <button class="tab" onclick="showPhotos('pr')">Puerto Rico on digital</button> -->
     <!-- <button class="tab" onclick="showPhotos('new-york')">New York</button> -->
   </div>
+  <hr class="tab-hr">
+</div>
 
   <!-- Overlay for enlarged photo -->
   <div id="photo-overlay" class="photo-overlay" style="display: none;">
