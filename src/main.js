@@ -238,6 +238,10 @@ const descriptions = {
     savdslr: "Spring 2024 - Photo walks through downtown Savannah on my Canon EOS Rebel T7 with a 18-55mm lens"
 };
 
+window.onload = function() {
+  showAbout();
+  highlightTab(document.querySelector('.tab')); // Highlights the first tab
+};
 
 function showAbout() {
   const photoGrid = document.querySelector(".photo-grid");
@@ -245,25 +249,32 @@ function showAbout() {
 
     // Clear existing photos
     photoGrid.innerHTML = "";
-    galleryDescription.textContent = "";
+    galleryDescription.textContent = "Welcome to the tomaso fotos experience";
     galleryDescription.margin = 0;
+
+    // const imgElement = document.createElement("img");
+    // imgElement.src = `public/about-me/me.jpeg`;
+    // photoGrid.appendChild(imgElement);
+
 
   // Add content for "About Me"
   photoGrid.innerHTML = `
     <div class="about-section">
-    <p>Hello! My name is Tom.</p>
-      <img src="public/about-me/portrait.jpeg" alt="About Me Portrait" class="about-photo">
-      <p>I love to ride motorcycles, eat good food, and take pictures along the way.<br><br>
-      I've shot on a Canon rebel t7 DSLR for years but recently have discovered a love for shooting on film.
-      Something about the colors, the nostalgic feel, and just how soulful images look on film really speaks to me.
-      In this process I've found a number of lessons can be extracted, something about delayed gratification and
-      the impact of things that are finite. It changes photography into something much more deep, and much more thrilling.
-      <br><br>I plan to shoot basically only film going forward, using my 1979 Canon A-1 I bought in Japan, with a 50mm prime 1.4 lense.</p>
-      <img src="public/about-me/me.jpeg" alt="Gallery 1" class="about-photo">
-      <p>I'm born and raised in the New York City area, but travel every chance I get since I work remote as a software engineer.</p>
-      <img src="public/about-me/hudsonvalley.JPG" alt="Gallery 2" class="about-photo">
-      <img src="public/about-me/pointreyes.jpeg" alt="Gallery 2" class="about-photo">
-      <img src="public/about-me/zorotail.jpeg" alt="Gallery 2" class="about-photo">
+      <img src="public/about-me/portrait.jpeg" alt="About Me Portrait" class="about-photo-portrait">
+      <p>My name is Tom and I'm a software engineer from NYC who loves motorcycles and taking pictures. <br><br>For me the two go hand in hand, and have
+      brought me around the globe to experiences that have shaped me as a person. I've owned and rebuilt three motorcycles, currently riding a 2019 
+      Yamaha XSR 700.<br><br>
+      I've been into photography since I could hold a camera but started taking it seriously around fall 2018 when I bought my first DSLR. A simple
+      Canon rebel t7 came with me on all my rides and adventures, from rooftop photoshoots in college to mountain road pulloffs looking at the viewfinder
+      through my helmet visor, that camera became an essential extension of me. <br><br>
+      Recently I've discovered a love for shooting on film that has really transformed the way I approach photography. I love how it slows me down but 
+      in a way also feels more mobile. The philosophy of having finite exposures forces you to consider and value each shot, and having to wait for it
+      to develop to see the results means you have no choice but to keep moving. Digital may have the crisp percision of the eye,
+      but film captures the warmth and depth of the heart. Picutres on film feel full and rich and timeless, and I can't get enough. <br><br>
+      I decided to finally upgrade from the point and shoots to a 1979 Canon A-1 I bought in Tokyo, and am on a mission to shoot only film. <br><br>
+      <img src="public/about-me/hudsonvalley.JPG" alt="Gallery 2" class="about-photo"> <br>
+      <img src="public/about-me/pointreyes.jpeg" alt="Gallery 2" class="about-photo"> <br>
+      <img src="public/about-me/zorotail.jpeg" alt="Gallery 2" class="about-photo"> <br>
       <img src="public/about-me/sallysc.JPG" alt="Gallery 2" class="about-photo">
       <p>Thank you for visiting my site. I hope these photos inspire you to explore the beauty around you!</p>
     </div>
