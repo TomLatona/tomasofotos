@@ -96,6 +96,7 @@ h1 {
     border-radius: 5px;
     font-size: 1.2em;
     font-family: 'tabfont';
+    color: black;
 }
 .tab:hover {
     background: #caeeef;
