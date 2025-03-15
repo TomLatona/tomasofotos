@@ -184,6 +184,53 @@ const photoData = {
       "nys27.JPG",
       "nys28.JPG"
     ],
+    bayarea: [
+      "bayarea(1).JPG",
+      "bayarea(2).JPG",
+      "bayarea(3).JPG",
+      "bayarea(4).JPG",
+      "bayarea(5).JPG",
+      "bayarea(6).JPG",
+      "bayarea(7).JPG",
+      "bayarea(8).JPG",
+      "bayarea(9).JPG",
+      "bayarea(10).JPG",
+      "bayarea(11).JPG",
+      "bayarea(12).JPG",
+      "bayarea(13).JPG",
+      "bayarea(14).JPG",
+      "bayarea(15).JPG",
+      "bayarea(16).JPG",
+      "bayarea(17).JPG",
+      "bayarea(18).JPG",
+      "bayarea(19).JPG",
+      "bayarea(20).JPG",
+      "bayarea(21).JPG",
+      "bayarea(22).JPG",
+      "bayarea(23).JPG",
+      "bayarea(24).JPG",
+      "bayarea(25).JPG",
+      "bayarea(26).JPG",
+      "bayarea(27).JPG",
+      "bayarea(28).JPG",
+      "bayarea(29).JPG",
+      "bayarea(30).JPG",
+      "bayarea(31).JPG",
+      "bayarea(32).JPG",
+      "bayarea(33).JPG",
+      "bayarea(34).JPG",
+      "bayarea(35).JPG",
+      "bayarea(36).JPG",
+      "bayarea(37).JPG",
+      "bayarea(38).JPG",
+      "bayarea(39).JPG",
+      "bayarea(40).JPG",
+      "bayarea(41).JPG",
+      "bayarea(42).JPG",
+      "bayarea(43).JPG",
+      "bayarea(44).JPG",
+      "bayarea(45).JPG"
+    ],
     savdslr: [
       "s1.JPG",
       "s2.JPG",
@@ -235,7 +282,10 @@ const descriptions = {
     portraits: "Here are some portraits of friends over the years.",
     soundshore: "Fall 2024 - Kodak gold - A chilly November walk through Greenwich point.",
     nys: "This collection is a few highlights from my weekend rides during freshman year of college. See the motorcycles tab for more background.",
-    savdslr: "Spring 2024 - Photo walks through downtown Savannah on my Canon EOS Rebel T7 with a 18-55mm lens"
+    savdslr: "Spring 2024 - Photo walks through downtown Savannah on my Canon EOS Rebel T7 with a 18-55mm lens",
+    bayarea: "Q1 2025 - Fujifilm XT-3 - Starting a new life chapter on the west coast. Living in the heart of San Francisco with access to " +
+        "endless adventures in every direction has me feeling very blessed. So much to discover and explore. The vistas from all of the hills in the city " +
+        "and the cinematic nature that surrounds it all is intoxicating. I'm definitely falling in love with the energetic and grounded culture of the bay."
 };
 
 window.onload = function() {
